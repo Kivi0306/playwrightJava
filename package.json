@@ -1,0 +1,22 @@
+{
+  "name": "playwrightjava",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kivi0306/playwrightJava.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kivi0306/playwrightJava/issues"
+  },
+  "homepage": "https://github.com/Kivi0306/playwrightJava#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "@types/node": "^24.2.0"
+  }
+}
