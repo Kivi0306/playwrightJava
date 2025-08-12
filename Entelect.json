@@ -1,0 +1,28 @@
+{
+  "websiteurls": {
+    "url": "https://entelect.co.za/"
+  },
+  "landingPage": {
+    "heading": {
+      "type": "text",
+      "value": "We offer end-to-end technology services and solutions, collaborating with our customers to help them go from good to great.",
+      "attributetext":"",
+      "subtype": "",
+      "role": ""
+    },
+    "CareerPathButton": { 
+      "type": "Locator",
+      "value": "We offer end-to-end technology services and solutions, collaborating with our customers to help them go from good to great.",
+      "attributetext":"",
+      "subtype": "heading",
+      "role": "main"    
+    },
+    "OurStoryLink":{
+        "type": "role",
+        "value": " Our Story",
+        "attributetext":"",
+        "subtype": "link",
+        "role": ""
+    }
+  }
+}

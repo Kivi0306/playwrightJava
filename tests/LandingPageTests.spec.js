@@ -1,15 +1,15 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 import Setup from '../Setup.js';
+import landingPage from '../pages/landingPage.js';
 
-test('Open Entelect Landing Page', async () => {
-  //Arrange 
-  /** @type {import('@playwright/test').Page} */
-  let page = await Setup.LaunchBrowser('chromium');
+test('Open and assert landing Page', async () => {
+  const { page, helpers } = await Setup.InitHelperPages('Entelect.json');``
+
   //Act
   await page.goto('https://entelect.co.za/');
   //Assert
-  await expect(page).toHaveTitle(/End-to-end technology services and solutions | Entelect/);
+  await helpers.landingPage.AssertLandingPage(); 
   await expect(page.getByText('We offer end-to-end technology services and solutions, collaborating with our customers to help them go from good to great.')).toBeVisible();
   await Setup.CloseBrowser();
 });
