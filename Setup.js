@@ -4,10 +4,12 @@ import path from 'path';
 
 // Import your helper page classes
 import LandingPage from './pages/landingPage.js';
+import AboutPage from './pages/aboutPage.js';
 
 class Setup {
   static browser = null;
   static page = null;
+  static websiteUrl = '';
   static locators = [];
 
   /**
@@ -71,9 +73,12 @@ class Setup {
 
     const helpers = {
       landingPage: new LandingPage(locators, page),
+      aboutPage: new AboutPage(locators, page),
     };
+ 
+    const websiteUrl = locators.websiteurls.url;
 
-    return { page, helpers };
+    return { page, helpers, websiteUrl };
   }
 }
 

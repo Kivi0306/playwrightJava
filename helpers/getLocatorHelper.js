@@ -21,8 +21,8 @@ export default class getLocatorHelper {
         return this.page.getByText(locatorName.value);
       case 'role':
         return this.page.getByRole(locatorName.subtype, { name: locatorName.value });
-      case 'css':
-        return this.page.locator(locatorName.value);
+      case 'locatorfilter':
+        return this.page.locator(locatorName.value).filter({ hasText: locatorName.attributetext });
       default:
         throw new Error(`Unknown locator type: ${locatorName.type}`);
     }

@@ -10,12 +10,12 @@
       "subtype": "",
       "role": ""
     },
-    "CareerPathButton": { 
-      "type": "Locator",
-      "value": "We offer end-to-end technology services and solutions, collaborating with our customers to help them go from good to great.",
-      "attributetext":"",
-      "subtype": "heading",
-      "role": "main"    
+    "AboutUsButton": { 
+      "type": "locatorfilter",
+      "value": "span.menu-text",
+      "attributetext":"About Us",
+      "subtype": "",
+      "role": ""    
     },
     "OurStoryLink":{
         "type": "role",
@@ -23,6 +23,15 @@
         "attributetext":"",
         "subtype": "link",
         "role": ""
+    }
+  },
+  "aboutPage": {
+    "OurStoryHeading": {
+      "type": "role",
+      "value": "Our Story",
+      "attributetext":"",
+      "subtype": "heading",
+      "role": ""
     }
   }
 }

@@ -1,9 +1,9 @@
 import getLocatorHelper from '../helpers/getLocatorHelper.js';
 import { expect } from '@playwright/test';
 
-class LandingPage {
+class AboutPage {
   constructor(locators, page) {
-    this.locators = locators.landingPage;
+    this.locators = locators.aboutPage;
     this.page = page;
     this.locatorHelper = new getLocatorHelper(this.page); 
   }
@@ -15,23 +15,11 @@ class LandingPage {
  * The above methods allow for time out as well as waiting for the element to be in the correct state.
  * The time out set will work like a while loop for the desired locator.
  */
- async AssertLandingPageAsync() {
-  const heading = await this.locatorHelper.getLocator(this.locators.heading);
+ async AssertOurStoryHeading() {
+  const heading = await this.locatorHelper.getLocator(this.locators.OurStoryHeading);
   await heading.waitFor({ state: 'visible' ,setTimeout: 5000});
   await expect(heading).toBeVisible();
-  }
-
- async ClickAboutUsAsync() {
-  const aboutUsButton = await this.locatorHelper.getLocator(this.locators.AboutUsButton);
-  //await aboutUsButton. waitFor({ state: 'visible', setTimeout: 1000});
-  await aboutUsButton.click();
-  }
-
- async ClickOurStoryButtonAsync() {
-  const ourStoryButton = await this.locatorHelper.getLocator(this.locators.OurStoryLink);
-  await ourStoryButton.waitFor({ state: 'visible' ,setTimeout: 5000});
-  await ourStoryButton.click();
-  }
+  }  
 }
 
-export default LandingPage;
+export default AboutPage;
