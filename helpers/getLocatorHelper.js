@@ -1,4 +1,3 @@
-// helpers/getLocatorHelper.js
 export default class getLocatorHelper {
   constructor(page) {
     this.page = page;

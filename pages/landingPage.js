@@ -9,7 +9,7 @@ class LandingPage {
   }
 
 async AssertLandingPage() {
-  console.log('Locator:', this.locators.heading); // 🔍 Add this line
+  console.log('Locator:', this.locators.heading);
   const heading = await this.locatorHelper.getLocator(this.locators.heading);
   await heading.waitFor({ state: 'visible' });
   await expect(heading).toBeVisible();

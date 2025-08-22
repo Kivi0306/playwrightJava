@@ -1,11 +1,9 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 import Setup from '../Setup.js';
-import landingPage from '../pages/landingPage.js';
 
 test('Open and assert landing Page', async () => {
-  const { page, helpers } = await Setup.InitHelperPages('Entelect.json');``
-
+  const { page, helpers } = await Setup.InitHelperPages('Entelect.json');
   //Act
   await page.goto('https://entelect.co.za/');
   //Assert
